@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HEAVEN Lab</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <main id="login-page">
+    <div class="login-box">
+      <h2>LOGIN</h2>
+      <form id="login-form">
+        <input type="email" placeholder="EMAIL" required/>
+        <input type="password" placeholder="PASSWORD" required/>
+        <button type="submit">LOGIN</button>
+        <div class="links">
+          <a href="#">Forget password?</a>
+          <p>Don’t have an account? <a href="#" onclick="showPage('register-page')">Register</a></p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <main id="register-page" class="hidden">
+    <div class="login-box">
+      <h2>REGISTER</h2>
+      <form id="register-form">
+        <input type="email" placeholder="EMAIL" required/>
+        <input type="password" placeholder="PASSWORD" required/>
+        <button type="submit">REGISTER</button>
+        <div class="links">
+          <p>Already have an account? <a href="#" onclick="showPage('login-page')">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <main id="home-page" class="hidden">
+    <div class="home-header">HI<br/><strong>SAM REXTON</strong></div>
+    <div class="gallery">GALLERY</div>
+    <div class="search">
+      <span class="search-icon">🔍</span>
+      <input type="text" placeholder="Find frames, photographs, albums, etc"/>
+    </div>
+    <div class="section-title">RESULT</div>
+    <div class="section-title">POPULAR</div>
+    <div class="cards">
+      <div class="card">FRAME NO:10 METALLIC G</div>
+      <div class="card">MUG WITH PRINT</div>
+      <div class="card">PEN ENGRAVING</div>
+      <div class="card">T SHIRT PRINT</div>
+    </div>
+    <footer><button class="nav-btn active">{H}</button><button class="nav-btn" onclick="goToProfile()">{P}</button><button class="nav-btn" onclick="goToTrend()">{T}</button></footer>
+  </main>
+
+  <main id="profile-page" class="hidden">
+    <div class="profile-header">
+      <img src="https://i.imgur.com/3GvwNBf.png" class="profile-pic"/>
+      <div class="profile-name">Welcome!</div>
+      <div class="profile-email">user@example.com</div>
+    </div>
+    <div class="profile-options">
+      <div class="profile-item">📅 Booking</div>
+      <div class="profile-item">🧾 Your Order</div>
+      <div class="profile-item">🖼️ Wallpaper</div>
+      <div class="profile-item">❤️ Favourite</div>
+    </div>
+    <footer><button class="nav-btn" onclick="goToHome()">{H}</button><button class="nav-btn" onclick="goToProfile()">{P}</button><button class="nav-btn active" onclick="goToTrend()">{T}</button></footer>
+  </main>
+
+  <main id="trend-page" class="hidden">
+    <h2>Trending Reels</h2>
+    <form id="upload-form" enctype="multipart/form-data" style="margin-bottom: 30px;">
+      <input type="text" name="title" placeholder="Reel Title" required><br>
+      <input type="file" name="video" accept="video/*" required><br>
+      <button type="submit">Upload Reel</button>
+    </form>
+    <div class="reels-container" id="reels-container"></div>
+    <footer>
+      <button class="nav-btn" onclick="goToHome()">{H}</button>
+      <button class="nav-btn" onclick="goToProfile()">{P}</button>
+      <button class="nav-btn active">{T}</button>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

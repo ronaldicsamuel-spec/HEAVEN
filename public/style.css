@@ -1,0 +1,43 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+}
+.hidden {
+  display: none;
+}
+main { padding: 20px; }
+.login-box {
+  max-width: 400px; margin: 100px auto; background: white;
+  padding: 20px; border-radius: 10px; text-align: center;
+}
+.login-box input, .login-box button {
+  width: 90%; padding: 10px; margin: 10px 0;
+}
+.home-header { font-size: 20px; margin-bottom: 20px; }
+.cards { display: flex; flex-wrap: wrap; gap: 10px; }
+.card {
+  background: white; padding: 15px;
+  flex: 1 1 45%; border-radius: 10px; text-align: center;
+}
+.profile-header { text-align: center; }
+.profile-pic { width: 80px; height: 80px; border-radius: 50%; }
+.profile-item {
+  background: white; margin: 10px 0;
+  padding: 15px; border-radius: 10px;
+}
+footer {
+  position: fixed; bottom: 0; width: 100%; background: #fff;
+  display: flex; justify-content: space-around;
+  padding: 10px 0; border-top: 1px solid #ccc;
+}
+.nav-btn { background: none; border: none; font-size: 20px; }
+.nav-btn.active { color: #2196f3; }
+.search {
+  display: flex; align-items: center;
+  margin: 10px 0; background: white; padding: 10px;
+  border-radius: 10px;
+}
+.search-icon { margin-right: 10px; }
+.reel { margin-bottom: 20px; }
