@@ -40,6 +40,13 @@ const Reel = mongoose.model('Reel', new mongoose.Schema({
 app.use(cors());
 app.use(bodyParser.json());
 
+const corsOptions = {
+  origin: 'https://heaven-lab-n1g6.onrender.com',
+  credentials: true,
+};
+app.use(cors(corsOptions));
+
+
 // Serve uploads folder statically
 app.use('/uploads/reels', express.static(path.join(__dirname, 'uploads/reels')));
 
